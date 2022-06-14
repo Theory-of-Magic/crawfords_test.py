@@ -1,9 +1,12 @@
 import matplotlib.pyplot as plt
 import numpy as np
-modifier = 0
-dicetype = int(input(print("How many sides does your dice have?")))
-rolls = int(input(print("How many rolls?")))
+modifier = float(0)
+dicetype = float(input(print("How many sides does your dice have?")))
+rolls = float(input(print("How many rolls?")))
 PI = 3.1415926535897932384626433832795
 
-A = (0.5(dicetype + 1) * rolls + modifier ) * ((PI / 6)(dicetype ^ 2 - 1 ))^ -(1/2)
-sigma = np.sqrt((rolls * (dicetype ^ 2 - 1)) / 12) 
+A = ((0.5 * (dicetype + 1.0) * rolls + modifier ) * (((PI / 6.0) * rolls) * (dicetype ** 2.0 - 1.0 ))** -0.5)
+sigma = np.sqrt((rolls * (dicetype ** 2.0 - 1.0)) / 12.0) 
+
+print("A = ", A)
+print("Sigma = ", sigma)
